@@ -4,7 +4,8 @@ class CLI
   def start
     puts "\n> Search for any D&D 5e monster that you'd like! What are you curious about today?"
     puts "\n> For available options, type '--help' at any point"
-    while true
+
+    loop do
       puts "> Type in a monster's name, with or without an additional option, or 'quit' if you'd like to exit."
       input = gets.chomp
 
@@ -23,6 +24,7 @@ class CLI
         puts "> Name:"
         puts "> Size:\n\n"
       end
+
     end
   end
 end
@@ -37,5 +39,5 @@ def display_help_menu
   puts "\nNote the below commands should be inserted before or after a monster's name"
   puts "--stats:                   displays the monster's stats"
   puts "--actions:                 displays the monster's actions\n\n"
-  sleep (2)
+  sleep(2)
 end
